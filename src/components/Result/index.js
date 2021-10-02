@@ -1,6 +1,7 @@
 import React from "react";
 import personalities from '../../data/personalityType.json'
 import ProgressBar from "../ProgressBar";
+import {BreakDown, Content, PercentDisplay, Personality, Type, Wrapper} from './Result.styles'
 
 
 const Result = ({ selection }) => {
@@ -31,42 +32,42 @@ const Result = ({ selection }) => {
     console.log(personalities[personalityType])
 
     const personalityMeaning = [["Extroversion", "Introversion"], ["Sensing", "Intuition"], ["Thinking", "Feeling"], ["Judging", "Perceiving"]];
-
+    const colors = ['var(--semicolonOrange2)', 'var(--semicolonHotRed3)', 'var(--semicolonAquaBlue5)', 'var(--semicolonPaleYellow1)']
 
     return (
 
-        <div style={{backgroundColor: "black", color: "white"}}>
-            <h1>Your Personality type is</h1>
-            <div>
-                <div>
-                    <h1>{personalityType}</h1>
-                    <h2>{personalities[personalityType].title}</h2>
-                    {personalities[personalityType].description.map((e, i) => {
+        <Wrapper>
+            <h2>Your Personality type is</h2>
+            <Content>
+                <Personality>
+                    <h1 style={{ color: 'black'}}>{personalityType}</h1>
+                    <h3 style={{ color: 'var(--semicolonGrey1)' }}>{personalities[personalityType].title}</h3>
+                    {personalities[personalityType].description.map((attr, index) => {
                         return (
-                            <h4 key={i}>{e}</h4>
+                            <h4 key={index}>{attr}</h4>
                         );
                     })}
-                </div>
-                <div>
+                </Personality>
+                <BreakDown>
                     <h3>Amazing!</h3>
                     {personalityMeaning.map((arr, index) => {
                         return (
-                            <div>
-                                <div>
+                            <div key={index}>
+                                <Type>
                                     <h3>{arr[0]}</h3>
                                     <h3>{arr[1]}</h3>
-                                </div>
-                                <div>
-                                    <h3>{optionsCount[index][0] / 5 * 100}%</h3>
-                                    <ProgressBar width={optionsCount[index][0] / 5 * 100}/>
-                                    <h3>{optionsCount[index][1] / 5 * 100}%</h3>
-                                </div>
+                                </Type>
+                                <PercentDisplay>
+                                    <h4>{optionsCount[index][0] / 5 * 100}%</h4>
+                                    <ProgressBar width={optionsCount[index][0] / 5 * 100} color={colors[index]} />
+                                    <h4>{optionsCount[index][1] / 5 * 100}%</h4>
+                                </PercentDisplay>
                             </div>
                         );
                     })}
-                </div>
-            </div>
-        </div>
+                </BreakDown>
+            </Content>
+        </Wrapper>
     );
 }
 

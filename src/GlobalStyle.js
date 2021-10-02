@@ -42,6 +42,8 @@ export const GlobalStyle = createGlobalStyle `
   body{
     margin: 0;
     padding: 0;
+    
+  
     h1{
       font-size: 2rem;
       font-weight: 600;
@@ -50,6 +52,7 @@ export const GlobalStyle = createGlobalStyle `
     h3{
       font-size: 1.1rem;
       font-weight: 600;
+      margin-bottom: 0;
     }
     p{
       font-size: 1rem;

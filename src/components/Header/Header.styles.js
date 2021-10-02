@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-          background: var(--darkGrey);      
+          background: #FF2E2E;      
           padding: 0 20px;
     `;
 
@@ -10,10 +10,14 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: var(--maxWidth);
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 auto;
 `;
 
+export const Text = styled.div`
+  color: #FFFFFF;
+  font-weight: bold;
+`
 
 export  const  LogoImg = styled.img`
 width: 200px;
