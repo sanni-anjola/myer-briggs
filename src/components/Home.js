@@ -11,6 +11,9 @@ import {useHomeFetch} from "../hooks/useHomeFetch";
 import Option from "./Options";
 import QuestionData from "./QuestionData";
 import {OptionButton} from "./OptionButton";
+import Button from "./Button";
+import ProgressBar from "./ProgressBar";
+import Questionnaire from "./Questionnaire";
 
 const Home =() =>{
 const {state, loading, error, setSearchTerm, searchTerm, questions, response} = useHomeFetch();
@@ -19,7 +22,7 @@ const {state, loading, error, setSearchTerm, searchTerm, questions, response} = 
     // console.log(options)
     return (
         <>
-        <OptionButton option={"Expend energy, enjoy groups"} />
+        <Questionnaire />
         </>
     );
 

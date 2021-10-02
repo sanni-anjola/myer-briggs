@@ -8,6 +8,7 @@ const initialState = {
     total_pages: 0,
     total_results: 0
 }
+
 export const useHomeFetch = () =>{
     const [searchTerm, setSearchTerm] = useState('');
     const [state, setState]= useState(initialState);

@@ -1,10 +1,11 @@
 import React from "react";
 import {OurButton,Wrapper, Content} from "./Button.styles";
 
-const Button = ({text}) =>(
+const Button = ({ text, disabled }) =>(
+
     <Wrapper>
         <Content>
-            <OurButton> {text}</OurButton>
+            <OurButton style={{display:`${disabled ? 'none' : ''}`}}>{ text }</OurButton>
         </Content>
     </Wrapper>
 
