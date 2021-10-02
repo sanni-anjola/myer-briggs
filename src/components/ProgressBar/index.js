@@ -4,7 +4,7 @@ const ProgressBar = ({ width }) => {
     return (
         <Container>
             <Filler style={{width: `${width}%`}}>
-                <Label>{`${width}%`}</Label>
+                {/*<Label>{`${width}%`}</Label>*/}
             </Filler>
         </Container>
     );

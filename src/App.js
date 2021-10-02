@@ -36,23 +36,19 @@ function App() {
 
 
     const handleLeftSelected = () => {
-        console.log(selection)
         const tempState = [...selection];
 
             tempState[currentQuestion] = {...selection[currentQuestion], selected: 1};
 
         setSelection([...tempState]);
-        console.log(selection)
     }
 
     const handleRightSelected = () => {
-        console.log(selection)
         const tempState = [...selection];
 
         tempState[currentQuestion] = {...selection[currentQuestion], selected: 0};
 
         setSelection([...tempState]);
-        console.log(selection)
     }
 
     return (
