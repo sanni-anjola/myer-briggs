@@ -3,7 +3,7 @@ import { Container, Filler, Label} from './ProgressBar.styles';
 const ProgressBar = ({ width, color }) => {
     return (
         <Container>
-            <Filler style={{width: `${width}%`, backgroundColor: color}}>
+            <Filler style={{width: `${width}%`, background: color}}>
                 {/*<Label>{`${width}%`}</Label>*/}
             </Filler>
         </Container>

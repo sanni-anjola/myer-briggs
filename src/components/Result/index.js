@@ -32,7 +32,12 @@ const Result = ({ selection }) => {
     console.log(personalities[personalityType])
 
     const personalityMeaning = [["Extroversion", "Introversion"], ["Sensing", "Intuition"], ["Thinking", "Feeling"], ["Judging", "Perceiving"]];
-    const colors = ['var(--semicolonOrange2)', 'var(--semicolonHotRed3)', 'var(--semicolonAquaBlue5)', 'var(--semicolonPaleYellow1)']
+    const colors = [
+        'var(--semicolonOrange2)',
+        'var(--semicolonHotRed3)',
+        'var(--semicolonBrightGreen1)',
+        'var(--semicolonPaleYellow1)'
+    ]
 
     return (
 
@@ -51,6 +56,8 @@ const Result = ({ selection }) => {
                 <BreakDown>
                     <h3>Amazing!</h3>
                     {personalityMeaning.map((arr, index) => {
+                        let width1 = optionsCount[index][0] / 5 * 100;
+                        let width2 = optionsCount[index][1] / 5 * 100;
                         return (
                             <div key={index}>
                                 <Type>
@@ -58,9 +65,13 @@ const Result = ({ selection }) => {
                                     <h3>{arr[1]}</h3>
                                 </Type>
                                 <PercentDisplay>
-                                    <h4>{optionsCount[index][0] / 5 * 100}%</h4>
-                                    <ProgressBar width={optionsCount[index][0] / 5 * 100} color={colors[index]} />
-                                    <h4>{optionsCount[index][1] / 5 * 100}%</h4>
+                                    <h4>{width1}%</h4>
+                                    <ProgressBar width={width1+width2}
+                                                 color={`linear-gradient(to right,
+                                                  ${width1>width2? colors[index]: '#E0E0DE'}, 
+                                                  ${width1>width2? colors[index]: '#E0E0DE'} ${width1}%, 
+                                                  ${width1>width2? '#E0E0DE': colors[index]} ${width1}%)`}/>
+                                    <h4>{width2}%</h4>
                                 </PercentDisplay>
                             </div>
                         );
