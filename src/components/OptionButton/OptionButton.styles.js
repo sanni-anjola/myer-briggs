@@ -21,7 +21,7 @@ export const Content = styled.div`
   //top: 497px;
   background: var(--semicolonGrey5);
   border-radius: 20px;
-  height: 25vh;
+  height: 30vh;
   width: 40vw;
   display: flex;
   cursor: pointer;
@@ -31,14 +31,17 @@ export const Content = styled.div`
 
 
 export const OptionText = styled.p`
+  align-self: center;
   //width: 446px;
   width: 90%;
-  height: 42px;
+  //height: 42px;
   //left: 126px;
   //top: 543px;
   font-weight: 300;
-  font-size: 36px;
-  line-height: 46.8px;
+  //font-size: 36px;
+  font-size: 2em;
+  //line-height: 46.8px;
+  line-height: 1.5em;
   margin: 0 auto;
   //position: absolute;
   color: #000000;

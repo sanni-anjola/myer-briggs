@@ -1,10 +1,9 @@
-import { Container, Filler, Label} from './ProgressBar.styles';
+import { Container, Filler} from './ProgressBar.styles';
 
 const ProgressBar = ({ width, color }) => {
     return (
         <Container>
             <Filler style={{width: `${width}%`, background: color}}>
-                {/*<Label>{`${width}%`}</Label>*/}
             </Filler>
         </Container>
     );

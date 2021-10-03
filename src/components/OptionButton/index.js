@@ -1,29 +1,11 @@
-import {useEffect, useRef, useState} from "react";
-
-import questions from '../../data/questions.json'
 import {Content, OptionText, Wrapper} from "./OptionButton.styles";
 
 export const OptionButton = (props) => {
-    const { selection, question, handleSelected } = props;
+    const { selection, handleSelected } = props;
 
 
     return (
-       // <Wrapper>
-       //     {props.question.map((ques, index) => {
-       //         return (
-       //             <div key={props.number + index} onClick={onOptionSelect} >
-       //                 <Content  style={{backgroundColor: bgColor}}>
-       //                     <OptionText>
-       //                         { ques }
-       //                     </OptionText>
-       //                 </Content>
-       //             </div>
-       //         );
-       //     })}
-       //
-       //   </Wrapper>
-        // var(--semicolonGrey5)
-        // '#D8E7FF'
+
         <Wrapper>
             <div onClick={handleSelected[0]}>
                 <Content

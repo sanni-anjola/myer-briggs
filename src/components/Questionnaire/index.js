@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import {OptionButton} from "../OptionButton";
 import Button from "../Button";
 import ProgressBar from "../ProgressBar";

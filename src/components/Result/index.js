@@ -23,13 +23,9 @@ const Result = ({ selection }) => {
         if( total >= 3){
             personalityType += personality[i][0];
         }else {
-            personalityType += personality[i][1]
+            personalityType += personality[i][1];
         }
     }
-
-    console.log(personalityType)
-    console.log(optionsCount)
-    console.log(personalities[personalityType])
 
     const personalityMeaning = [["Extroversion", "Introversion"], ["Sensing", "Intuition"], ["Thinking", "Feeling"], ["Judging", "Perceiving"]];
     const colors = [
@@ -68,9 +64,9 @@ const Result = ({ selection }) => {
                                     <h4>{width1}%</h4>
                                     <ProgressBar width={width1+width2}
                                                  color={`linear-gradient(to right,
-                                                  ${width1>width2? colors[index]: '#E0E0DE'}, 
-                                                  ${width1>width2? colors[index]: '#E0E0DE'} ${width1}%, 
-                                                  ${width1>width2? '#E0E0DE': colors[index]} ${width1}%)`}/>
+                                                  ${width1 > width2? colors[index]: '#E0E0DE'}, 
+                                                  ${width1 > width2? colors[index]: '#E0E0DE'} ${width1}%, 
+                                                  ${width1 > width2? '#E0E0DE': colors[index]} ${width1}%)`}/>
                                     <h4>{width2}%</h4>
                                 </PercentDisplay>
                             </div>

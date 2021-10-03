@@ -4,13 +4,15 @@ import styled from "styled-components";
 export const OurCards = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 60vh;
+  width: 80%;
+  margin: 0 auto;
 `
 
 export const OurCard = styled.div`
   text-align: center;
-  
+  height: 40vh;
   background: var(--semicolonAquaBlue5);
   width: 24em;
   border-radius: 0.6em;
@@ -39,18 +41,8 @@ export const OurCard = styled.div`
     transform: scale(1.03);
     box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
   }
-
-  & img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  & hr {
-    height: 1px;
-    width: 80%;
-    margin: 10px auto 0;
-    color: var(--semicolonGrey4);
-  }
+  
+  
   & h2 {
     color: #222;
     margin-top: -0.2em;
